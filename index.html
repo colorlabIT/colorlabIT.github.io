@@ -3,493 +3,243 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Colorlab - Design Management & Curated Luxury</title>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-    <style>
-        :root {
-            --primary-color: #000;
-            --secondary-color: #333;
-            --accent-color: #2d6cdf;
-            --background-color: #fff;
-            --grid-gap: 2rem;
-        }
-        
-        .slogan-text {
-            font-family: 'Playfair Display', serif;
-            font-size: 3rem;
-            font-weight: 700;
-            margin: 0;
-            line-height: 1.2;
-            letter-spacing: 0.1em;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 0.5rem;
-        }
+    <meta name="description" content="colorlab is a centralized project coordination and communication platform connecting every stakeholder in construction and development. Eliminate miscommunication, prevent costly rework, and deliver projects on time and on budget.">
+    <meta name="keywords" content="construction project management, project coordination, construction communication, Toronto construction, project management platform">
 
-        .line {
-            display: block;
-            white-space: nowrap;
-        }
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="colorlab - Centralized Project Coordination & Communication">
+    <meta property="og:description" content="Connecting every stakeholder in construction and development. Prevent costly rework and deliver projects on time and on budget.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://colorlab.ca">
+    <meta property="og:image" content="https://colorlab.ca/assets/images/colorlab-MAIN-LOGO-BLACK.png">
 
-        .divider {
-            position: relative;
-            height: 80px;
-            margin: 1.5rem 0;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
+    <title>colorlab - Project Coordination for Construction & Development</title>
 
-        .dot {
-            font-size: 2rem;
-            color: var(--secondary-color);
-            transition: opacity 0.4s ease;
-            position: absolute;
-        }
-
-        @keyframes logoGrow {
-            0% {
-                transform: scale(0.1);
-                opacity: 0;
-            }
-            20% {
-                opacity: 1;
-            }
-            100% {
-                transform: scale(1);
-                opacity: 1;
-            }
-        }
-
-        .logo-divider {
-            height: 60px;
-            width: auto;
-            opacity: 0;
-            position: absolute;
-            transform-origin: center center;
-        }
-
-        .logo-reveal {
-            animation: logoGrow 0.8s ease-out forwards;
-        }
-
-        .letter-span {
-            display: inline-block;
-            transition: opacity 0.4s ease;
-            margin: 0 0.02em;
-        }
-
-        .fade-out {
-            opacity: 0;
-        }
-
-        .logo-reveal {
-            opacity: 1;
-        }
-
-        .header-logo-clone {
-            height: 40px;
-            width: auto;
-            opacity: 0;
-            position: fixed;
-            left: 50%;
-            transform: translateX(-50%) translateY(0);
-            transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
-            display: block;
-            pointer-events: none;
-            will-change: transform;
-        }
-
-        .header-logo-clone.show {
-            opacity: 1;
-        }
-
-        .message-wrapper {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            gap: 0.5rem;
-        }
-
-        .cta-wrapper {
-            position: fixed;
-            left: calc(50% + 40px);  /* Offset to align with 'T' */
-            transform: translateX(-50%);
-            z-index: 100;
-            pointer-events: none;
-            transform-origin: center center;
-            will-change: transform;
-        }
-
-        .cta-text {
-            font-size: 1rem;
-            margin-top: 6rem;
-            transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
-            text-decoration: none;
-            background-color: var(--background-color);
-            padding: 0.825rem;
-            border-radius: 10px;
-            display: inline-block;
-            border: 1px solid var(--primary-color);
-            pointer-events: auto;
-            opacity: 0;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            transform: scale(1.1) translateX(30px);
-        }
-
-        .button-logo {
-            height: 30px;
-            width: auto;
-            display: block;
-            transition: all 0.4s ease;
-            margin-top: 7px;
-            margin-bottom: 7px;
-        }
-
-        .cta-text:hover {
-            background-color: rgba(0, 0, 0, 0.1);
-        }
-
-        .cta-text:hover .button-logo {
-            transform: scale(1.05);
-        }
-
-        .initial-text {
-            background-color: transparent;
-            color: var(--secondary-color);
-            border: none;
-            padding: 0;
-            text-transform: none;
-            letter-spacing: normal;
-            pointer-events: auto;
-        }
-
-        .initial-text:hover {
-            color: var(--accent-color);
-        }
-
-        .slogan {
-            font-family: 'Playfair Display', serif;
-            font-size: 1.1rem;
-            letter-spacing: 2px;
-            text-align: center;
-            margin-top: 0.5rem;
-            color: var(--secondary-color);
-        }
-        
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            margin: 0;
-            font-family: 'Inter', sans-serif;
-            background: var(--background-color);
-            color: var(--primary-color);
-            line-height: 1.6;
-        }
-
-        .header {
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            background: rgba(255, 255, 255, 0.98);
-            padding: 1.5rem 2rem;
-            z-index: 1000;
-            border-bottom: 1px solid rgba(0,0,0,0.1);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .logo {
-            height: 50px;
-            width: auto;
-            display: block;
-            transition: opacity 0.3s ease;
-        }
-
-        .hero {
-            margin-top: 80px;
-            height: calc(100vh - 80px);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background: #fff;
-            padding: 2rem;
-            transition: background-color 0.2s ease;
-        }
-
-        .hero-content {
-            max-width: 800px;
-            text-align: center;
-        }
-
-        .hero h1 {
-            font-family: 'Playfair Display', serif;
-            font-size: 4rem;
-            line-height: 1.2;
-            margin-bottom: 1.5rem;
-        }
-
-        .hero p {
-            font-size: 1.25rem;
-            color: var(--secondary-color);
-            max-width: 600px;
-            margin: 0 auto;
-        }
-
-        .grid-container {
-            max-width: 1400px;
-            margin: 4rem auto;
-            padding: 0 2rem;
-            display: grid;
-            grid-template-columns: repeat(12, 1fr);
-            gap: var(--grid-gap);
-        }
-
-        .featured {
-            grid-column: span 8;
-            min-height: 600px;
-            background: #f8f8f8;
-            padding: 3rem;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-        }
-
-        .sidebar {
-            grid-column: span 4;
-            display: flex;
-            flex-direction: column;
-            gap: var(--grid-gap);
-        }
-
-        .card {
-            background: #f8f8f8;
-            padding: 2rem;
-            min-height: 280px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-        }
-
-        .section-title {
-            font-family: 'Playfair Display', serif;
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-        }
-
-        .card-title {
-            font-family: 'Playfair Display', serif;
-            font-size: 1.5rem;
-            margin-bottom: 1rem;
-        }
-
-        .text-content {
-            font-size: 1.1rem;
-            color: var(--secondary-color);
-            margin-bottom: 1.5rem;
-        }
-
-        .link-button {
-            display: inline-block;
-            padding: 0.8rem 2rem;
-            background: var(--primary-color);
-            color: white;
-            text-decoration: none;
-            font-weight: 500;
-            transition: background-color 0.3s;
-        }
-
-        .link-button:hover {
-            background: var(--accent-color);
-        }
-
-        footer {
-            background: var(--primary-color);
-            color: white;
-            padding: 4rem 2rem;
-            margin-top: 4rem;
-        }
-
-        .footer-content {
-            max-width: 1400px;
-            margin: 0 auto;
-            text-align: center;
-        }
-
-        @media (max-width: 1024px) {
-            .featured, .sidebar {
-                grid-column: span 12;
-            }
-            
-            .hero h1 {
-                font-size: 3rem;
-            }
-        }
-
-        @media (max-width: 768px) {
-            .hero h1 {
-                font-size: 2.5rem;
-            }
-            
-            .section-title {
-                font-size: 2rem;
-            }
-            
-            .grid-container {
-                padding: 0 1rem;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="assets/css/main.css">
 </head>
 <body>
+    <!-- Header -->
     <header class="header">
-        <img src="colorlab-MAIN-LOGO-BLACK.png" alt="Colorlab Logo" class="logo">
+        <div class="header-container">
+            <a href="index.html">
+                <img src="assets/images/colorlab-MAIN-LOGO-BLACK.png" alt="colorlab" class="logo">
+            </a>
+            <nav>
+                <button class="mobile-menu-toggle" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
+    <!-- Hero Section -->
     <section class="hero">
         <div class="hero-content">
-            <h1 class="slogan-text">
-                <span class="line">DESIGN</span>
-                <span class="line">MANAGEMENT</span>
-            </h1>
-            <div class="divider">
-                <span class="dot">●</span>
-                <img src="C-LOGO.png" alt="Colorlab C Logo" class="logo-divider">
+            <h1>Connecting Every Stakeholder in Construction & Development</h1>
+            <p class="subheadline">
+                colorlab is a centralized project coordination and communication platform that eliminates miscommunication,
+                prevents costly rework, and delivers higher-quality projects on time and on budget.
+            </p>
+            <a href="contact.html" class="btn btn-primary cta-primary">Book a Call</a>
+        </div>
+    </section>
+
+    <!-- Overview Section -->
+    <section class="bg-light">
+        <div class="section-container">
+            <div class="section-header">
+                <h2 class="section-title fade-in">What We Do</h2>
+                <p class="section-subtitle fade-in">
+                    By bringing together developers, architects, builders, interior designers, and trades on one platform,
+                    we eliminate the chaos that leads to delays, budget overruns, and quality issues.
+                </p>
             </div>
-            <div class="message-wrapper">
-                <h1 class="slogan-text">
-                    <span class="line">CURATED</span>
-                    <span class="line">LUXURY</span>
-                </h1>
-                <p class="initial-text"></p>
-                <div class="cta-wrapper">
-                    <a href="mailto:get@colorlab.ca" class="final-text cta-text" style="opacity: 0;">
-                        <img src="colorlab-MAIN-LOGO-BLACK.png" alt="Colorlab Logo" class="button-logo">
-                    </a>
+
+            <div class="grid grid-2" style="max-width: 900px; margin: 0 auto;">
+                <div class="card">
+                    <h3>The Problem</h3>
+                    <p>
+                        Miscommunication, deferred responsibilities, and unresolved loose ends create costly rework,
+                        missed opportunities, and unnecessary waste in construction and development projects.
+                    </p>
+                </div>
+                <div class="card">
+                    <h3>Our Solution</h3>
+                    <p>
+                        A centralized platform that connects every stakeholder, ensures accountability, and prevents
+                        issues before they occur—resulting in fairer pricing and greater efficiency.
+                    </p>
                 </div>
             </div>
         </div>
     </section>
 
-    <script>
-        // Split text into individual letters
-        function wrapLetters(element) {
-            const lines = element.querySelectorAll('.line');
-            lines.forEach(line => {
-                const text = line.textContent;
-                line.textContent = '';
-                [...text].forEach((letter, index) => {
-                    const span = document.createElement('span');
-                    span.className = 'letter-span';
-                    // Mark C, U and AT in CURATED to keep them visible
-                    if (text === 'CURATED' && (index === 1 || index === 3 || index === 4)) {
-                        span.className = 'letter-span keep';
-                    }
-                    span.textContent = letter === ' ' ? '\u00A0' : letter;
-                    line.appendChild(span);
-                });
-            });
-        }
+    <!-- Key Benefits Section -->
+    <section>
+        <div class="section-container">
+            <div class="section-header">
+                <h2 class="section-title fade-in">Why colorlab</h2>
+            </div>
 
-        // Initialize letters
-        document.querySelectorAll('.slogan-text').forEach(wrapLetters);
+            <div class="grid grid-3">
+                <div class="card card-border card-hover">
+                    <h3>Eliminate Miscommunication</h3>
+                    <p>
+                        Keep every stakeholder aligned with real-time coordination and transparent communication
+                        across all project phases.
+                    </p>
+                </div>
 
-        let lastScrollPosition = window.pageYOffset;
-        const letters = document.querySelectorAll('.letter-span');
-        const dot = document.querySelector('.dot');
-        const logo = document.querySelector('.logo-divider');
-        const initialText = document.querySelector('.initial-text');
-        const finalText = document.querySelector('.final-text');
-        
-        function animateElements(scrollingDown) {
-            // Fade out letters except CU and AT
-            letters.forEach(letter => {
-                if (!letter.classList.contains('keep')) {
-                    const delay = Math.random() * 300;
-                    setTimeout(() => {
-                        letter.style.opacity = scrollingDown ? '0' : '1';
-                    }, delay);
-                }
-            });
+                <div class="card card-border card-hover">
+                    <h3>Prevent Costly Rework</h3>
+                    <p>
+                        Identify and resolve issues before they become expensive problems. Save time, money,
+                        and resources through proactive coordination.
+                    </p>
+                </div>
 
+                <div class="card card-border card-hover">
+                    <h3>Deliver On Time & On Budget</h3>
+                    <p>
+                        Achieve higher-quality projects with predictable timelines and transparent pricing.
+                        No surprises, just results.
+                    </p>
+                </div>
 
+                <div class="card card-border card-hover">
+                    <h3>Centralized Platform</h3>
+                    <p>
+                        One single source of truth for all project documentation, decisions, and communication.
+                        Accessible anytime, anywhere.
+                    </p>
+                </div>
 
-            // Switch between dot and logo
-            setTimeout(() => {
-                if (scrollingDown) {
-                    dot.style.opacity = '0';
-                    logo.classList.add('logo-reveal');
-                } else {
-                    dot.style.opacity = '1';
-                    logo.classList.remove('logo-reveal');
-                    logo.style.opacity = '0';
-                }
-            }, 200);
+                <div class="card card-border card-hover">
+                    <h3>Complete Accountability</h3>
+                    <p>
+                        Track responsibilities, deadlines, and deliverables. No more deferred decisions or
+                        unresolved loose ends.
+                    </p>
+                </div>
 
-            // Switch between texts and move wrapper
-            setTimeout(() => {
-                if (scrollingDown) {
-                    initialText.style.opacity = '0';
-                    finalText.style.opacity = '1';
-                } else {
-                    initialText.style.opacity = '1';
-                    finalText.style.opacity = '0';
-                }
-            }, 300);
-        }
+                <div class="card card-border card-hover">
+                    <h3>Greater Efficiency</h3>
+                    <p>
+                        Streamline workflows, reduce waste, and maximize productivity across all teams and trades.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-        function handleScroll() {
-            const currentScrollPosition = window.pageYOffset;
-            if (currentScrollPosition !== lastScrollPosition) {
-                const isScrollingDown = currentScrollPosition > lastScrollPosition;
-                animateElements(isScrollingDown);
+    <!-- Who It's For Section -->
+    <section class="bg-light">
+        <div class="section-container">
+            <div class="section-header">
+                <h2 class="section-title fade-in">Built for the Industry</h2>
+                <p class="section-subtitle fade-in">
+                    colorlab serves the full spectrum of construction and development stakeholders
+                </p>
+            </div>
 
-                // Move the CTA wrapper
-            const ctaWrapper = document.querySelector('.cta-wrapper');
-            const cta = document.querySelector('.final-text');
-            const headerLogo = document.querySelector('.header .logo');
-            const scrollPercent = Math.min(currentScrollPosition / (window.innerHeight * 0.3), 1);                // Button moves up and slides in from right
-                const buttonMoveDistance = scrollPercent * 30; // Move to middle
-                ctaWrapper.style.transform = `translateX(-50%) translateY(-${buttonMoveDistance}vh)`;
-                cta.style.opacity = scrollPercent;
-                cta.style.transform = `scale(1.1) translateX(${40 - (scrollPercent * 40)}px)`;
-                
-                // Fade out header logo
-                headerLogo.style.opacity = 1 - scrollPercent;
-            }
-            lastScrollPosition = currentScrollPosition;
-        }
+            <div class="grid grid-4">
+                <div class="card">
+                    <h4>Developers</h4>
+                    <p>Maintain oversight and control across all project phases and stakeholders.</p>
+                </div>
 
-        // Throttle the scroll event
-        let ticking = false;
-        window.addEventListener('scroll', () => {
-            if (!ticking) {
-                window.requestAnimationFrame(() => {
-                    handleScroll();
-                    ticking = false;
-                });
-                ticking = true;
-            }
-        });
+                <div class="card">
+                    <h4>Architects</h4>
+                    <p>Ensure design intent is preserved throughout construction and execution.</p>
+                </div>
 
-        // Initial state
-        animateElements(false);
-    </script>
-    </script>
+                <div class="card">
+                    <h4>Builders</h4>
+                    <p>Coordinate seamlessly with all trades and stakeholders to stay on schedule.</p>
+                </div>
 
-    <footer>
-        <div class="footer-content">
-            <p>1411-A DUFFERIN ST., TORONTO ON M6H 4C7</p>
-            <p style="margin-top: 1rem;">Get in touch: <a href="mailto:info@colorlab.com" style="color: white; text-decoration: underline;">info@colorlab.com</a></p>
+                <div class="card">
+                    <h4>Interior Designers</h4>
+                    <p>Manage specifications, selections, and installations with precision and clarity.</p>
+                </div>
+
+                <div class="card">
+                    <h4>Trades</h4>
+                    <p>Access clear instructions, timelines, and requirements without confusion or delays.</p>
+                </div>
+
+                <div class="card">
+                    <h4>Project Managers</h4>
+                    <p>Centralize coordination and keep every team member aligned and accountable.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section>
+        <div class="section-container text-center">
+            <div style="max-width: 700px; margin: 0 auto;">
+                <h2 class="fade-in mb-md">Ready to Transform Your Projects?</h2>
+                <p class="fade-in mb-lg" style="font-size: 1.125rem; color: var(--color-gray-dark);">
+                    Join forward-thinking construction and development teams in Toronto who are
+                    delivering higher-quality projects with less waste and greater efficiency.
+                </p>
+                <div class="fade-in">
+                    <a href="contact.html" class="btn btn-primary" style="margin-right: 1rem;">Request a Consultation</a>
+                    <a href="services.html" class="btn btn-secondary">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-grid">
+                <div>
+                    <h4>colorlab</h4>
+                    <p>
+                        Centralized project coordination and communication for construction and development.
+                    </p>
+                </div>
+
+                <div>
+                    <h4>Navigation</h4>
+                    <p><a href="about.html">About</a></p>
+                    <p><a href="services.html">Services</a></p>
+                    <p><a href="projects.html">Projects</a></p>
+                    <p><a href="contact.html">Contact</a></p>
+                </div>
+
+                <div>
+                    <h4>Location</h4>
+                    <p>Toronto, Ontario</p>
+                    <p>Canada</p>
+                </div>
+
+                <div>
+                    <h4>Contact</h4>
+                    <p>Email: <a href="mailto:info@colorlab.ca">info@colorlab.ca</a></p>
+                    <p>Phone: <a href="tel:+14165551234">(416) 555-1234</a></p>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2024 colorlab. All rights reserved.</p>
+            </div>
         </div>
     </footer>
+
+    <script src="assets/js/main.js"></script>
 </body>
 </html>
