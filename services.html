@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Discover how colorlab.'s centralized project coordination platform works. From onboarding to project completion, we streamline communication and eliminate waste.">
+    <meta name="keywords" content="colorlab services, construction project coordination, how colorlab works, project management process">
+
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="Services & How It Works - colorlab.">
+    <meta property="og:description" content="Centralized coordination for every phase of your construction and development project.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://colorlab.ca/services">
+
+    <title>Services & How It Works - colorlab.</title>
+
+    <link rel="stylesheet" href="assets/css/main.css">
+    <style>
+        .process-step {
+            display: grid;
+            grid-template-columns: 100px 1fr;
+            gap: 2rem;
+            margin-bottom: 3rem;
+            opacity: 0;
+            transform: translateY(30px);
+        }
+
+        .process-step.visible {
+            opacity: 1;
+            transform: translateY(0);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+
+        .step-number {
+            width: 100px;
+            height: 100px;
+            border: 2px solid var(--color-black);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: var(--font-serif);
+            font-size: 2.5rem;
+            font-weight: 500;
+        }
+
+        .step-content h3 {
+            margin-bottom: 1rem;
+        }
+
+        .step-content p {
+            color: var(--color-gray-dark);
+            line-height: 1.8;
+        }
+
+        @media (max-width: 768px) {
+            .process-step {
+                grid-template-columns: 60px 1fr;
+                gap: 1rem;
+            }
+
+            .step-number {
+                width: 60px;
+                height: 60px;
+                font-size: 1.75rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-container">
+            <a href="index.html">
+                <img src="assets/images/colorlab-MAIN-LOGO-BLACK.png" alt="colorlab." class="logo">
+            </a>
+            <nav>
+                <button class="mobile-menu-toggle" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" style="min-height: 70vh;">
+        <div class="hero-content">
+            <h1>How <span class="brand-name">colorlab.</span> Works</h1>
+            <p class="subheadline">
+                From project kickoff to final delivery, our platform ensures seamless coordination
+                across every stakeholder, phase, and decision.
+            </p>
+        </div>
+    </section>
+
+    <!-- Overview Section -->
+    <section>
+        <div class="section-container">
+            <div class="section-header">
+                <h2 class="section-title fade-in">Our Services</h2>
+                <p class="section-subtitle fade-in">
+                    Comprehensive solutions for every phase of your construction and development project
+                </p>
+            </div>
+
+            <div class="grid grid-3">
+                <div class="card card-border">
+                    <h3>Project Coordination</h3>
+                    <p>
+                        Centralized communication and coordination across all stakeholders. Real-time updates,
+                        complete transparency, and proactive issue resolution keep your project on track.
+                    </p>
+                </div>
+
+                <div class="card card-border">
+                    <h3>Design Management</h3>
+                    <p>
+                        Professional oversight of all design decisions, specifications, and selections. Ensure
+                        design intent is preserved and executed flawlessly throughout construction.
+                    </p>
+                </div>
+
+                <div class="card card-border">
+                    <h3>Upgrades</h3>
+                    <p>
+                        Curated product offerings and premium selections expertly sourced and coordinated.
+                        Streamlined process for end users with seamless integration into project timelines.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section class="bg-light">
+        <div class="section-container">
+            <div class="section-header">
+                <h2 class="section-title fade-in">The <span class="brand-name">colorlab.</span> Process</h2>
+                <p class="section-subtitle fade-in">
+                    A proven approach to eliminate waste and deliver exceptional results
+                </p>
+            </div>
+
+            <div style="max-width: 900px; margin: 0 auto;">
+                <div class="process-step">
+                    <div class="step-number">01</div>
+                    <div class="step-content">
+                        <h3>Project Onboarding</h3>
+                        <p>
+                            We begin by understanding your project scope, stakeholders, and objectives. All team
+                            members, including developers, architects, builders, designers, and trades, are brought onto the
+                            platform with clear roles and responsibilities defined from day one.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="process-step">
+                    <div class="step-number">02</div>
+                    <div class="step-content">
+                        <h3>Centralized Setup</h3>
+                        <p>
+                            Project documentation, specifications, schedules, and requirements are uploaded to the
+                            platform. A single source of truth is established, accessible to every stakeholder
+                            with appropriate permissions and notifications.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="process-step">
+                    <div class="step-number">03</div>
+                    <div class="step-content">
+                        <h3>Active Coordination</h3>
+                        <p>
+                            Throughout the project lifecycle, <span class="brand-name">colorlab.</span> facilitates real-time communication, tracks
+                            decisions, manages changes, and ensures accountability. Issues are identified early,
+                            questions are answered immediately, and everyone stays aligned.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="process-step">
+                    <div class="step-number">04</div>
+                    <div class="step-content">
+                        <h3>Proactive Problem Prevention</h3>
+                        <p>
+                            Our platform identifies potential conflicts, delays, or miscommunications before they
+                            become costly problems. Automated alerts, clear workflows, and transparent tracking
+                            prevent issues from falling through the cracks.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="process-step">
+                    <div class="step-number">05</div>
+                    <div class="step-content">
+                        <h3>Quality Assurance & Closeout</h3>
+                        <p>
+                            As the project nears completion, all deliverables are verified, documentation is
+                            finalized, and loose ends are resolved. Nothing is left unfinished. The result is
+                            a higher-quality project with minimized delays and waste prevented.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Design Management Section -->
+    <section>
+        <div class="section-container">
+            <div class="section-header">
+                <h2 class="section-title fade-in">Design Management</h2>
+                <p class="section-subtitle fade-in">
+                    Professional oversight ensuring design vision becomes reality
+                </p>
+            </div>
+
+            <div class="grid grid-2">
+                <div class="card card-border card-hover">
+                    <h3>Specification Management</h3>
+                    <p>
+                        Track and coordinate all design specifications, materials, and finishes throughout
+                        the project. Ensure selections align with design intent and budget requirements.
+                    </p>
+                </div>
+
+                <div class="card card-border card-hover">
+                    <h3>Design Coordination</h3>
+                    <p>
+                        Facilitate seamless communication between architects, interior designers, and builders.
+                        Resolve design conflicts before they impact construction timelines.
+                    </p>
+                </div>
+
+                <div class="card card-border card-hover">
+                    <h3>Selection Process</h3>
+                    <p>
+                        Manage the entire selection process for finishes, fixtures, and materials. Coordinate
+                        approvals, lead times, and delivery schedules with construction milestones.
+                    </p>
+                </div>
+
+                <div class="card card-border card-hover">
+                    <h3>Design Documentation</h3>
+                    <p>
+                        Maintain comprehensive records of all design decisions, changes, and approvals.
+                        Ensure design intent is preserved and communicated to all trades.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Upgrades Section -->
+    <section class="bg-light">
+        <div class="section-container">
+            <div class="section-header">
+                <h2 class="section-title fade-in">Upgrades</h2>
+                <p class="section-subtitle fade-in">
+                    Curated product offerings that enhance value for developers and end users
+                </p>
+            </div>
+
+            <div class="grid grid-2">
+                <div class="card card-border card-hover">
+                    <h3>Product Sourcing</h3>
+                    <p>
+                        Source premium products and materials from trusted suppliers. Negotiate pricing
+                        and ensure availability aligns with project timelines and delivery requirements.
+                    </p>
+                </div>
+
+                <div class="card card-border card-hover">
+                    <h3>Curated Selections</h3>
+                    <p>
+                        Present end users with carefully curated upgrade options that complement
+                        the project design while maintaining quality and consistency.
+                    </p>
+                </div>
+
+                <div class="card card-border card-hover">
+                    <h3>Upgrade Coordination</h3>
+                    <p>
+                        Manage the complete upgrade process from selection to installation. Coordinate
+                        with trades, track deadlines, and ensure seamless integration into construction schedules.
+                    </p>
+                </div>
+
+                <div class="card card-border card-hover">
+                    <h3>End User Experience</h3>
+                    <p>
+                        Streamline the selection process for purchasers with clear presentations, transparent
+                        pricing, and professional guidance throughout their decision journey.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Coordination Details Section -->
+    <section>
+        <div class="section-container">
+            <div class="section-header">
+                <h2 class="section-title fade-in">Project Coordination</h2>
+                <p class="section-subtitle fade-in">
+                    Comprehensive coordination for every aspect of your project
+                </p>
+            </div>
+
+            <div class="grid grid-2">
+                <div class="card card-border card-hover">
+                    <h3>Stakeholder Management</h3>
+                    <p>
+                        Coordinate seamlessly between developers, architects, builders, interior designers,
+                        and all trades. Everyone has access to the information they need, when they need it.
+                    </p>
+                </div>
+
+                <div class="card card-border card-hover">
+                    <h3>Document Control</h3>
+                    <p>
+                        Centralized storage and version control for all project documentation, drawings,
+                        specifications, and contracts. Always know you're working with the latest information.
+                    </p>
+                </div>
+
+                <div class="card card-border card-hover">
+                    <h3>Schedule Coordination</h3>
+                    <p>
+                        Keep all stakeholders aligned on timelines, milestones, and deadlines. Automated
+                        notifications ensure no one misses a critical date or deliverable.
+                    </p>
+                </div>
+
+                <div class="card card-border card-hover">
+                    <h3>Change Management</h3>
+                    <p>
+                        Track and communicate changes efficiently. Ensure all stakeholders are notified,
+                        impacts are assessed, and approvals are documented.
+                    </p>
+                </div>
+
+                <div class="card card-border card-hover">
+                    <h3>Issue Resolution</h3>
+                    <p>
+                        Identify, document, and resolve issues before they escalate. Clear ownership and
+                        transparent tracking ensure nothing falls through the cracks.
+                    </p>
+                </div>
+
+                <div class="card card-border card-hover">
+                    <h3>Quality Control</h3>
+                    <p>
+                        Maintain quality standards throughout the project lifecycle. Inspections, approvals,
+                        and punch lists are tracked and verified systematically.
+                    </p>
+                </div>
+
+                <div class="card card-border card-hover">
+                    <h3>Budget Tracking</h3>
+                    <p>
+                        Monitor costs, track changes, and maintain transparency on all financial aspects.
+                        Prevent budget overruns through proactive coordination.
+                    </p>
+                </div>
+
+                <div class="card card-border card-hover">
+                    <h3>Reporting & Analytics</h3>
+                    <p>
+                        Gain insights into project progress, stakeholder performance, and areas for improvement.
+                        Data-driven decisions lead to better outcomes.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section class="bg-light">
+        <div class="section-container">
+            <div class="section-header">
+                <h2 class="section-title fade-in">The <span class="brand-name">colorlab.</span> Advantage</h2>
+                <p class="section-subtitle fade-in">
+                    Measurable benefits across every aspect of your project
+                </p>
+            </div>
+
+            <div class="grid grid-2" style="gap: 3rem;">
+                <div class="fade-in">
+                    <h3 class="mb-md">Reduced Costs</h3>
+                    <p style="font-size: 1.125rem; line-height: 1.8; color: var(--color-gray-dark);">
+                        Eliminate costly rework, reduce waste, and prevent budget overruns. Proactive coordination
+                        saves money by catching issues before they become expensive problems.
+                    </p>
+                </div>
+
+                <div class="fade-in">
+                    <h3 class="mb-md">Minimize Delays</h3>
+                    <p style="font-size: 1.125rem; line-height: 1.8; color: var(--color-gray-dark);">
+                        Streamlined communication and clear accountability help prevent delays. Eliminate
+                        setbacks caused by miscommunication or missing information.
+                    </p>
+                </div>
+
+                <div class="fade-in">
+                    <h3 class="mb-md">Higher Quality</h3>
+                    <p style="font-size: 1.125rem; line-height: 1.8; color: var(--color-gray-dark);">
+                        Maintain standards, track quality control, and ensure nothing is overlooked. The result is
+                        projects that exceed expectations and satisfy all stakeholders.
+                    </p>
+                </div>
+
+                <div class="fade-in">
+                    <h3 class="mb-md">Better Relationships</h3>
+                    <p style="font-size: 1.125rem; line-height: 1.8; color: var(--color-gray-dark);">
+                        Clear communication and transparent processes reduce friction between stakeholders. Collaboration
+                        improves when everyone has the information they need.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section>
+        <div class="section-container text-center">
+            <div style="max-width: 700px; margin: 0 auto;">
+                <h2 class="fade-in mb-md">Ready to Get Started?</h2>
+                <p class="fade-in mb-lg" style="font-size: 1.125rem; color: var(--color-gray-dark);">
+                    Transform how your next project is coordinated. Schedule a consultation to learn
+                    how <span class="brand-name">colorlab.</span> can eliminate waste and deliver better results.
+                </p>
+                <div class="fade-in">
+                    <a href="contact.html" class="btn btn-primary" style="margin-right: 1rem;">Schedule a Meeting</a>
+                    <a href="projects.html" class="btn btn-secondary">View Our Work</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-grid">
+                <div>
+                    <h4><span class="brand-name">colorlab.</span></h4>
+                    <p>
+                        Centralized project coordination and communication for construction and development.
+                    </p>
+                </div>
+
+                <div>
+                    <h4>Navigation</h4>
+                    <p><a href="about.html">About</a></p>
+                    <p><a href="services.html">Services</a></p>
+                    <p><a href="projects.html">Projects</a></p>
+                    <p><a href="contact.html">Contact</a></p>
+                </div>
+
+                <div>
+                    <h4>Location</h4>
+                    <p>Toronto, Ontario</p>
+                    <p>Canada</p>
+                </div>
+
+                <div>
+                    <h4>Contact</h4>
+                    <p>Email: <a href="mailto:info@colorlab.ca">info@colorlab.ca</a></p>
+                    <p>Phone: <a href="tel:+14165551234">(416) 555-1234</a></p>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2024 <span class="brand-name">colorlab.</span> All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+    <script>
+        // Observe process steps for fade-in animation
+        const processSteps = document.querySelectorAll('.process-step');
+        const stepObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        processSteps.forEach(step => stepObserver.observe(step));
+    </script>
+</body>
+</html>
