@@ -55,6 +55,16 @@
                 font-size: 1.75rem;
             }
         }
+
+        /* Fix for Our Services grid: 3 cards on top row, 2 centered on bottom row (desktop only) */
+        @media (min-width: 769px) {
+            .grid.grid-3 > div:nth-child(4) {
+                grid-column-start: 2;
+            }
+            .grid.grid-3 > div:nth-child(5) {
+                grid-column-start: 3;
+            }
+        }
     </style>
 </head>
 <body>
