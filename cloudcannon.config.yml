@@ -1,0 +1,7 @@
+paths:
+  static: ''
+  uploads: uploads
+timezone: America/Toronto
+markdown:
+  engine: commonmark
+  options: {}
