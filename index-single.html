@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="colorlab. delivers centralized project coordination and communication services connecting every stakeholder in construction and development. Eliminate miscommunication, prevent costly rework, and minimize delays while controlling project costs.">
+    <meta name="keywords" content="construction project management, project coordination, construction communication, Toronto construction, design management, upgrades">
+
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="colorlab. - Centralized Project Coordination & Communication">
+    <meta property="og:description" content="Connecting every stakeholder in construction and development. Prevent costly rework, minimize delays, and control project costs.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://colorlab.ca">
+    <meta property="og:image" content="https://colorlab.ca/assets/images/colorlab-MAIN-LOGO-BLACK.png">
+
+    <title>colorlab. - Project Coordination for Construction & Development</title>
+
+    <link rel="stylesheet" href="assets/css/main.css">
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Project Images Grid */
+        .project-images {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 0;
+        }
+
+        .project-image {
+            width: 100%;
+            height: 150px;
+            background-color: var(--color-gray-light);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: var(--font-serif);
+            font-size: 2rem;
+            color: rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            position: relative;
+            border: 0.5px solid rgba(0, 0, 0, 0.05);
+        }
+
+        .project-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .project-card {
+            background-color: var(--color-white);
+            overflow: hidden;
+            transition: var(--transition-smooth);
+            border: 1px solid rgba(0, 0, 0, 0.1);
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .project-content {
+            padding: 2rem;
+        }
+
+        .project-type {
+            font-size: 0.85rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--color-gray-medium);
+            margin-bottom: 0.5rem;
+        }
+
+        .project-title {
+            font-family: var(--font-serif);
+            font-size: 1.75rem;
+            font-weight: 500;
+            margin-bottom: 1rem;
+        }
+
+        .project-description {
+            color: var(--color-gray-dark);
+            line-height: 1.7;
+            margin-bottom: 0;
+        }
+
+        /* Contact Form */
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+        }
+
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 0.75rem;
+            font-family: var(--font-sans);
+            font-size: 1rem;
+            border: 1px solid rgba(0, 0, 0, 0.2);
+            background-color: var(--color-white);
+            transition: border-color 0.3s ease;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: var(--color-black);
+        }
+
+        .form-group textarea {
+            min-height: 150px;
+            resize: vertical;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-container">
+            <a href="#home">
+                <img src="assets/images/colorlab-MAIN-LOGO-BLACK.png" alt="colorlab." class="logo">
+            </a>
+            <nav>
+                <button class="mobile-menu-toggle" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul class="nav-menu">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Connecting Every Stakeholder in Construction & Development</h1>
+            <p class="subheadline">
+                <span class="brand-name">colorlab.</span> delivers centralized project coordination and communication that eliminates miscommunication,
+                prevents costly rework, and achieves higher-quality projects with minimized delays and controlled costs.
+            </p>
+            <a href="#contact" class="btn btn-primary cta-primary">Book a Call</a>
+        </div>
+    </section>
+
+    <!-- What We Do Section -->
+    <section class="bg-light">
+        <div class="section-container">
+            <div class="section-header">
+                <h2 class="section-title fade-in">What We Do</h2>
+                <p class="section-subtitle fade-in">
+                    <span class="brand-name">colorlab.</span> delivers comprehensive project coordination, design management,
+                    and curated upgrade offerings. Seamless execution from concept to completion.
+                </p>
+            </div>
+
+            <div class="grid grid-3">
+                <div class="card card-border">
+                    <h3>Project Coordination</h3>
+                    <p>
+                        Centralized communication and coordination across all stakeholders: developers, architects,
+                        builders, interior designers, and trades. Eliminate miscommunication and prevent costly rework
+                        before issues occur.
+                    </p>
+                </div>
+                <div class="card card-border">
+                    <h3>Design Management</h3>
+                    <p>
+                        Comprehensive oversight of design decisions, specifications, and selections throughout
+                        the project lifecycle. Ensure design intent is preserved and executed with precision.
+                    </p>
+                </div>
+                <div class="card card-border">
+                    <h3>Upgrades</h3>
+                    <p>
+                        Curated product offerings and premium selections sourced and coordinated for your projects.
+                        Provide end users with exceptional choices while maintaining project timelines and margins.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+        <div class="section-container">
+            <div class="section-header">
+                <h2 class="section-title fade-in">About <span class="brand-name">colorlab.</span></h2>
+                <p class="section-subtitle fade-in">
+                    Transforming how the industry works together
+                </p>
+            </div>
+
+            <div class="grid grid-2" style="gap: 4rem; margin-bottom: 4rem;">
+                <div class="fade-in">
+                    <h3 class="mb-md">Our Mission</h3>
+                    <p style="font-size: 1.125rem; line-height: 1.8; color: var(--color-gray-dark);">
+                        To provide centralized coordination that connects every stakeholder in construction and development,
+                        eliminating miscommunication and preventing costly rework before it occurs. We're committed to
+                        delivering higher-quality projects with minimized delays, controlled costs, fairer pricing and greater efficiency
+                        for everyone involved.
+                    </p>
+                </div>
+
+                <div class="fade-in">
+                    <h3 class="mb-md">Our Vision</h3>
+                    <p style="font-size: 1.125rem; line-height: 1.8; color: var(--color-gray-dark);">
+                        A construction and development industry where every stakeholder, from developers and architects
+                        to builders, designers, and trades, works in seamless coordination. Where projects are completed
+                        without waste, delays are prevented, and quality is the standard, not the exception.
+                    </p>
+                </div>
+            </div>
+
+            <div style="max-width: 900px; margin: 0 auto;">
+                <div class="card fade-in">
+                    <h3 class="mb-md">Why We Exist</h3>
+                    <p style="font-size: 1.125rem; line-height: 1.8; margin-bottom: 1rem;">
+                        Miscommunication between stakeholders leads to deferred responsibilities and unresolved loose ends.
+                        Decisions get lost in email threads. Specifications change without proper notification. Critical
+                        details fall through the cracks between architects, builders, designers, and trades.
+                    </p>
+                    <p style="font-size: 1.125rem; line-height: 1.8; margin-bottom: 0;">
+                        <span class="brand-name">colorlab.</span> was created to solve this fundamental problem. We provide centralized coordination
+                        where every stakeholder has access to the same information, in real time. Where accountability
+                        is transparent. Where issues are identified and resolved before they become expensive problems.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="bg-light">
+        <div class="section-container">
+            <div class="section-header">
+                <h2 class="section-title fade-in">Our Services</h2>
+                <p class="section-subtitle fade-in">
+                    Comprehensive solutions for every phase of your construction and development project
+                </p>
+            </div>
+
+            <div class="grid grid-2">
+                <div class="card card-border card-hover">
+                    <h3>Stakeholder Management</h3>
+                    <p>
+                        Coordinate seamlessly between developers, architects, builders, interior designers,
+                        and all trades. Everyone has access to the information they need, when they need it.
+                    </p>
+                </div>
+
+                <div class="card card-border card-hover">
+                    <h3>Document Control</h3>
+                    <p>
+                        Centralized storage and version control for all project documentation, drawings,
+                        specifications, and contracts. Always know you're working with the latest information.
+                    </p>
+                </div>
+
+                <div class="card card-border card-hover">
+                    <h3>Design Coordination</h3>
+                    <p>
+                        Facilitate seamless communication between architects, interior designers, and builders.
+                        Resolve design conflicts before they impact construction timelines.
+                    </p>
+                </div>
+
+                <div class="card card-border card-hover">
+                    <h3>Quality Control</h3>
+                    <p>
+                        Maintain quality standards throughout the project lifecycle. Inspections, approvals,
+                        and punch lists are tracked and verified systematically.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects">
+        <div class="section-container">
+            <div class="section-header">
+                <h2 class="section-title fade-in">Our Projects</h2>
+                <p class="section-subtitle fade-in">
+                    Delivering exceptional results through centralized coordination and clear communication
+                </p>
+            </div>
+
+            <div class="grid grid-3">
+                <!-- Project 1 -->
+                <div class="project-card fade-in">
+                    <div class="project-images">
+                        <div class="project-image" style="background-color: #E8E8E8;">
+                            <span>01</span>
+                        </div>
+                        <div class="project-image" style="background-color: #D5D5D5;">
+                            <span>01</span>
+                        </div>
+                        <div class="project-image" style="background-color: #C2C2C2;">
+                            <span>01</span>
+                        </div>
+                        <div class="project-image" style="background-color: #AFAFAF;">
+                            <span>01</span>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-type">Multi-Residential</div>
+                        <h3 class="project-title">Bloor Street Residences</h3>
+                        <p class="project-description">
+                            58-unit mid-rise development coordinated from initial design through final delivery.
+                            Seamless collaboration between developers, architects, and multiple trade contractors.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="project-card fade-in">
+                    <div class="project-images">
+                        <div class="project-image" style="background-color: #E8E8E8;">
+                            <span>02</span>
+                        </div>
+                        <div class="project-image" style="background-color: #D5D5D5;">
+                            <span>02</span>
+                        </div>
+                        <div class="project-image" style="background-color: #C2C2C2;">
+                            <span>02</span>
+                        </div>
+                        <div class="project-image" style="background-color: #AFAFAF;">
+                            <span>02</span>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-type">Custom Home</div>
+                        <h3 class="project-title">Forest Hill Estate</h3>
+                        <p class="project-description">
+                            Luxury custom home build featuring complex architectural details and high-end finishes.
+                            Coordinated between architect, interior designer, builder, and specialized trades.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="project-card fade-in">
+                    <div class="project-images">
+                        <div class="project-image" style="background-color: #E8E8E8;">
+                            <span>03</span>
+                        </div>
+                        <div class="project-image" style="background-color: #D5D5D5;">
+                            <span>03</span>
+                        </div>
+                        <div class="project-image" style="background-color: #C2C2C2;">
+                            <span>03</span>
+                        </div>
+                        <div class="project-image" style="background-color: #AFAFAF;">
+                            <span>03</span>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-type">Commercial</div>
+                        <h3 class="project-title">King West Office Renovation</h3>
+                        <p class="project-description">
+                            Complete interior renovation of 15,000 sq ft office space. Managed coordination between
+                            building management, tenants, contractors, and city inspectors.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="bg-light">
+        <div class="section-container">
+            <div class="section-header">
+                <h2 class="section-title fade-in">Get In Touch</h2>
+                <p class="section-subtitle fade-in">
+                    Ready to transform how your next project is coordinated? Let's talk.
+                </p>
+            </div>
+
+            <div class="grid grid-2" style="gap: 3rem;">
+                <!-- Contact Form -->
+                <div class="fade-in">
+                    <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+                        <div class="form-group">
+                            <label for="name">Name *</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Email *</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="phone">Phone</label>
+                            <input type="tel" id="phone" name="phone">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="project-type">Project Type</label>
+                            <select id="project-type" name="project-type">
+                                <option value="">Select a project type</option>
+                                <option value="multi-residential">Multi-Residential</option>
+                                <option value="custom-home">Custom Home</option>
+                                <option value="commercial">Commercial</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">Message *</label>
+                            <textarea id="message" name="message" required></textarea>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary" style="width: 100%;">Send Message</button>
+                    </form>
+                </div>
+
+                <!-- Contact Information -->
+                <div class="fade-in">
+                    <div class="card mb-md">
+                        <h3 class="mb-md">Contact Information</h3>
+                        <p style="margin-bottom: 1rem;">
+                            <strong>Email:</strong><br>
+                            <a href="mailto:info@colorlab.ca">info@colorlab.ca</a>
+                        </p>
+                        <p style="margin-bottom: 1rem;">
+                            <strong>Phone:</strong><br>
+                            <a href="tel:+14165551234">(416) 555-1234</a>
+                        </p>
+                        <p style="margin-bottom: 0;">
+                            <strong>Location:</strong><br>
+                            Toronto, Ontario, Canada
+                        </p>
+                    </div>
+
+                    <div class="card">
+                        <h3 class="mb-md">Office Hours</h3>
+                        <p style="margin-bottom: 0.5rem;"><strong>Monday - Friday:</strong> 9:00 AM - 6:00 PM</p>
+                        <p style="margin-bottom: 0;"><strong>Saturday - Sunday:</strong> By appointment</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-grid">
+                <div>
+                    <h4><span class="brand-name">colorlab.</span></h4>
+                    <p>
+                        Centralized project coordination and communication for construction and development.
+                    </p>
+                </div>
+
+                <div>
+                    <h4>Navigation</h4>
+                    <p><a href="#home">Home</a></p>
+                    <p><a href="#about">About</a></p>
+                    <p><a href="#services">Services</a></p>
+                    <p><a href="#projects">Projects</a></p>
+                    <p><a href="#contact">Contact</a></p>
+                </div>
+
+                <div>
+                    <h4>Location</h4>
+                    <p>Toronto, Ontario</p>
+                    <p>Canada</p>
+                </div>
+
+                <div>
+                    <h4>Contact</h4>
+                    <p>Email: <a href="mailto:info@colorlab.ca">info@colorlab.ca</a></p>
+                    <p>Phone: <a href="tel:+14165551234">(416) 555-1234</a></p>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2024 <span class="brand-name">colorlab.</span> All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
