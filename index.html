@@ -207,8 +207,19 @@
             z-index: 1000;
             border-bottom: 1px solid rgba(0,0,0,0.1);
             display: flex;
-            justify-content: center;
+            justify-content: space-between;
             align-items: center;
+        }
+
+        .nav-link {
+            text-decoration: none;
+            color: var(--primary-color);
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .nav-link:hover {
+            color: var(--accent-color);
         }
 
         .logo {
@@ -356,6 +367,7 @@
 <body>
     <header class="header">
         <img src="colorlab-MAIN-LOGO-BLACK.png" alt="Colorlab Logo" class="logo">
+        <a href="gallery.html" class="nav-link">Projects</a>
     </header>
 
     <section class="hero">
