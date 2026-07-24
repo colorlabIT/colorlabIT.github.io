@@ -1,0 +1,31 @@
+# colorlab.
+
+> colorlab. is a Toronto-based design management and project coordination company for the construction and development industry. It centralizes communication between builders, architects, developers, interior designers, and trades to eliminate rework, reduce miscommunication, and keep projects on schedule and on budget.
+
+## About
+
+colorlab. delivers centralized project coordination and communication services connecting every stakeholder in construction and development. The company's core value proposition is "Tailored Living": synchronizing design management to uphold the highest standards of project quality, from concept to completion. The team brings 50+ years of combined industry expertise, has served 2,000+ homes, and works with 100+ clients.
+
+- Location: 1411-A Dufferin St., Toronto, Ontario, Canada
+- Email: hello@colorlab.ca
+- Phone: +1 416 450 9525
+- Hours: Monday–Friday, by appointment only
+
+## Services
+
+- **Design Management | Tailored Living** — Centralizing the design evolution and maintaining a unified record of drawings, specifications, and contracts so documentation stays aligned with the vision from concept to completion.
+- **Colour Selection & Upgrades** — Guiding purchasers through a curated selection process that personalizes their home while protecting the builder's original design intent.
+- **Commercial & Residential Design** — Tailoring commercial and residential environments into cohesive, immersive experiences.
+- **Product Design** — Developing products from concept to production through emerging technologies and artisan craftsmanship.
+
+## Project Types
+
+colorlab.'s portfolio spans residential kitchens and bathrooms, commercial retail interiors, multi-residential developments, and custom townhome construction, largely in the Toronto area.
+
+## Pages
+
+- [Homepage](https://colorlab.ca/) — single-page site covering Home, Services, Projects, and Contact.
+
+## Notes for AI crawlers
+
+This is the full, current content of the colorlab. website. There are no additional subpages beyond the homepage sections listed above. For business inquiries, use the contact email or phone number listed above rather than a contact form (the site does not currently have one).

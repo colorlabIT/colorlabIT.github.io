@@ -1,0 +1,37 @@
+---
+import ServiceCard from './ServiceCard.tsx';
+---
+<section id="services" class="bg-white px-6 pb-20 md:px-12 md:pb-28">
+  <div class="mx-auto max-w-7xl">
+    <h2 class="font-serif text-4xl text-black md:text-5xl">Our Services</h2>
+
+    <div class="mt-12 grid grid-cols-1 gap-x-12 gap-y-12 md:mt-16 md:grid-cols-2">
+      <ServiceCard title="Design Management | Tailored Living" client:visible>
+        Clarity through coordination. We elevate the project into an experience of Tailored
+        Living. By partnering with you to centralize the design evolution, we maintain a unified
+        record of all drawings, specifications, and contracts, ensuring your project documentation
+        remains aligned with the vision, from concept to completion.
+      </ServiceCard>
+
+      <ServiceCard title="Colour Selection & Upgrades" delay={0.1} client:visible>
+        Protecting your vision, personalizing their home. We ensure that your standards remain
+        intact while giving purchasers the curated freedom they desire. We guide them through a
+        sophisticated selection process that transforms plans into high-end, personal havens - all
+        while staying true to your original design intent.
+      </ServiceCard>
+
+      <ServiceCard title="Commercial & Residential Design" delay={0.2} client:visible>
+        Design excellence that brings it all together. We tailor the environment to bring your
+        space to life, ensuring every detail contributes to a cohesive, immersive experience. We
+        define the vision, curating the atmosphere to give the space meaning.
+      </ServiceCard>
+
+      <ServiceCard title="Product Design" delay={0.3} client:visible>
+        Precision meets imagination. We develop products that push boundaries through seamless
+        integration of emerging technologies and artisan craftsmanship. From concept to
+        production, every detail is examined with obsessive curiosity. The result: designs that
+        feel inevitable only after they exist.
+      </ServiceCard>
+    </div>
+  </div>
+</section>

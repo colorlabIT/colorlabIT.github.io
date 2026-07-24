@@ -1,0 +1,132 @@
+---
+import '../styles/global.css';
+
+interface Props {
+  title?: string;
+  description?: string;
+}
+
+const {
+  title = "colorlab. — Design Management & Project Coordination | Toronto",
+  description = "colorlab. delivers centralized project coordination and communication services connecting every stakeholder in construction and development. Eliminate miscommunication, prevent costly rework, and minimize delays while controlling project costs.",
+} = Astro.props;
+
+const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+const ogImageURL = new URL('/images/og-image.png', Astro.site);
+---
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="generator" content={Astro.generator} />
+
+  <title>{title}</title>
+  <meta name="description" content={description} />
+  <meta name="author" content="colorlab." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href={canonicalURL} />
+
+  <!-- Favicons -->
+  <link rel="icon" type="image/png" href="/images/favicon-light.png" media="(prefers-color-scheme: light)" />
+  <link rel="icon" type="image/png" href="/images/favicon-dark.png" media="(prefers-color-scheme: dark)" />
+  <link rel="apple-touch-icon" href="/images/apple-touch-icon.png" />
+
+  <!-- Open Graph -->
+  <meta property="og:site_name" content="colorlab." />
+  <meta property="og:title" content={title} />
+  <meta property="og:description" content={description} />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content={canonicalURL} />
+  <meta property="og:image" content={ogImageURL} />
+  <meta property="og:locale" content="en_CA" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content={title} />
+  <meta name="twitter:description" content={description} />
+  <meta name="twitter:image" content={ogImageURL} />
+
+  <!-- Preload critical fonts -->
+  <link rel="preload" href="/fonts/geist-latin.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="preload" href="/fonts/eb-garamond-latin.woff2" as="font" type="font/woff2" crossorigin />
+
+  <!-- Structured Data: Organization / LocalBusiness -->
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "HomeAndConstructionBusiness",
+    "@id": "https://colorlab.ca/#business",
+    "name": "colorlab.",
+    "alternateName": "Colorlab",
+    "url": "https://colorlab.ca/",
+    "logo": "https://colorlab.ca/images/logo.svg",
+    "image": "https://colorlab.ca/images/og-image.png",
+    "description": "colorlab. delivers centralized project coordination and communication services connecting every stakeholder in construction and development, including design management, colour selection and upgrades, and commercial and residential design.",
+    "email": "hello@colorlab.ca",
+    "telephone": "+1-416-450-9525",
+    "priceRange": "$$",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "1411-A Dufferin St.",
+      "addressLocality": "Toronto",
+      "addressRegion": "ON",
+      "addressCountry": "CA"
+    },
+    "areaServed": { "@type": "City", "name": "Toronto" },
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Services",
+      "itemListElement": [
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Design Management | Tailored Living",
+            "description": "Centralizing the design evolution and maintaining a unified record of drawings, specifications, and contracts so project documentation stays aligned with the vision from concept to completion."
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Colour Selection & Upgrades",
+            "description": "Guiding purchasers through a curated selection process that personalizes their home while protecting the builder's original design intent."
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Commercial & Residential Design",
+            "description": "Tailoring commercial and residential environments into cohesive, immersive experiences, defining the vision and curating the atmosphere."
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Product Design",
+            "description": "Developing products from concept to production through the integration of emerging technologies and artisan craftsmanship."
+          }
+        }
+      ]
+    }
+  })} />
+
+  <!-- Structured Data: WebSite -->
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "@id": "https://colorlab.ca/#website",
+    "url": "https://colorlab.ca/",
+    "name": "colorlab.",
+    "description": "Design management and project coordination for construction and development in Toronto.",
+    "publisher": { "@id": "https://colorlab.ca/#business" },
+    "inLanguage": "en-CA"
+  })} />
+</head>
+<body>
+  <slot />
+</body>
+</html>

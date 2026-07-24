@@ -1,0 +1,32 @@
+---
+import GalleryItem from './GalleryItem.tsx';
+
+const items = [
+  { jpg: '/images/gallery-1.jpg', webp: '/images/gallery-1.webp', alt: 'White kitchen with brass hardware and pendant lighting, project by Modoforma and Partners', caption: 'Renovations', className: 'col-span-6 h-[280px] md:col-span-3 md:h-[340px]' },
+  { jpg: '/images/gallery-2.jpg', webp: '/images/gallery-2.webp', alt: 'Commercial Sales Office Interior with marble display panels overlooking a city street, project by colorlab.', caption: 'Colour-Selection', className: 'col-span-6 h-[280px] md:col-span-3 md:h-[340px]' },
+  { jpg: '/images/gallery-3.jpg', webp: '/images/gallery-3.webp', alt: 'Modern lobby interior with lounge seating, project by Modoforma', caption: 'Commercial', className: 'col-span-6 h-[220px] sm:col-span-2' },
+  { jpg: '/images/gallery-4.jpg', webp: '/images/gallery-4.webp', alt: 'Polished lobby flooring detail, project by colorlab.', caption: 'Commercial', className: 'col-span-6 h-[220px] sm:col-span-2' },
+  { jpg: '/images/gallery-5.jpg', webp: '/images/gallery-5.webp', alt: 'Custom Supporting Wall Application, project by colorlab.', caption: 'Commercial', className: 'col-span-6 h-[220px] sm:col-span-2' },
+  { jpg: '/images/gallery-6.jpg', webp: '/images/gallery-6.webp', alt: 'Row of custom multi-residential townhomes under construction, project consulting by colorlab.', caption: 'Multi-Residential', className: 'col-span-6 h-[220px] md:h-[300px]' },
+  { jpg: '/images/gallery-7.jpg', webp: '/images/gallery-7.webp', alt: 'Moss wall art and Outdoor Furniture, project by colorlab.', caption: 'Outdoor', className: 'col-span-6 h-[220px] sm:col-span-2' },
+  { jpg: '/images/gallery-8.jpg', webp: '/images/gallery-8.webp', alt: 'Custom Selections Board, project by colorlab.', caption: 'Colour-Selection', className: 'col-span-6 h-[220px] sm:col-span-2' },
+  { jpg: '/images/gallery-9.jpg', webp: '/images/gallery-9.webp', alt: 'Modern balcony architecture on a glass residential tower, project consulting and Colour-Selection by colorlab.', caption: 'Multi-Residential', className: 'col-span-6 h-[220px] sm:col-span-2' },
+];
+---
+<section id="projects" class="bg-white px-6 pb-20 md:px-12 md:pb-28">
+  <div class="mx-auto max-w-7xl">
+    <div class="grid grid-cols-6 gap-2 md:gap-3">
+      {items.map((item, i) => (
+        <GalleryItem
+          jpg={item.jpg}
+          webp={item.webp}
+          alt={item.alt}
+          caption={item.caption}
+          className={item.className}
+          delay={(i % 3) * 0.08}
+          client:visible
+        />
+      ))}
+    </div>
+  </div>
+</section>

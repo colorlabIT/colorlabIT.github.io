@@ -1,0 +1,41 @@
+---
+import Stats from './Stats.tsx';
+
+const mosaic = [
+  { jpg: '/images/mosaic-1.jpg', webp: '/images/mosaic-1.webp', alt: 'Wood-panelled kitchen cabinetry with a marble waterfall island, designed by colorlab.' },
+  { jpg: '/images/mosaic-2.jpg', webp: '/images/mosaic-2.webp', alt: 'Custom bathroom vanity with warm ambient lighting, designed by colorlab.' },
+  { jpg: '/images/mosaic-3.jpg', webp: '/images/mosaic-3.webp', alt: 'Marble and dark-toned kitchen island detail, designed by colorlab.' },
+];
+---
+<section class="bg-white px-6 py-20 md:px-12 md:py-28">
+  <div class="mx-auto max-w-7xl">
+    <div class="grid grid-cols-3 gap-2 md:gap-3">
+      {mosaic.map((img) => (
+        <div class="h-44 overflow-hidden md:h-64">
+          <picture>
+            <source srcset={img.webp} type="image/webp" />
+            <img
+              src={img.jpg}
+              alt={img.alt}
+              loading="lazy"
+              decoding="async"
+              class="h-full w-full object-cover"
+            />
+          </picture>
+        </div>
+      ))}
+    </div>
+
+    <p class="mx-auto mt-16 max-w-3xl text-xl leading-relaxed text-neutral-800 md:text-2xl">
+      Our drive stems from a commitment to <strong class="font-semibold">exacting standards</strong> and
+      a <strong class="font-semibold">tenure of high-impact collaboration</strong>. We create the
+      framework for success by guiding the project flow and <strong class="font-semibold">calibrating
+      the process</strong>, acting as an <strong class="font-semibold">extension of your team</strong> to
+      help key players navigate complexity with total confidence.
+    </p>
+
+    <div class="mt-16 md:mt-20">
+      <Stats client:visible />
+    </div>
+  </div>
+</section>
